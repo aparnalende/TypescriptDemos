@@ -6,7 +6,7 @@ var Book = /** @class */ (function () {
     }
     //function 
     Book.prototype.ListDetails = function () {
-        console.log("Book Title -  :   " + this.bookname + "  " + "Author -  :   " + this.author);
+        console.log("Book Title -  :   " + this.bookname + "  " + "Author -  :   " + this.author+" ");
     };
     return Book;
 }());
