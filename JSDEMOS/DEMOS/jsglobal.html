@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function f1()
+        {
+            document.write("<br/>" + parseInt(" 123 "));
+            document.write("<br/>" + parseInt("234 67 89"));
+            document.write("<br/>" + parseInt("23.67"));
+            document.write("<br/>" + parseInt("345hello"));
+            document.write("<br/>" + parseInt("Hello"));
+            document.write("<br/>************<br/>");
+            document.write("<br/>" + parseFloat(" 123 "));
+            document.write("<br/>" + parseFloat("234 67 89"));
+            document.write("<br/>" + parseFloat("23.67"));
+            document.write("<br/>" + parseFloat("345hello"));
+            document.write("<br/>" + parseFloat("Hello"));
+        }
+        function f2()
+        {
+            document.write("<br/>" + isNaN(-76.44));
+            document.write("<br/>" + isNaN(0));
+            document.write("<br/>" + isNaN(4*5));
+            document.write("<br/>" + isNaN("2019/4/5"));
+            document.write("<br/>" + isNaN("Hello"));
+            document.write("<br/>" + isNaN(2019 / 4 / 5));
+            document.write("<br/>************<br/>");
+            document.write("<br/>" + isFinite(-76.44));
+            document.write("<br/>" + isFinite(0));
+            document.write("<br/>" + isFinite(4 * 5));
+            document.write("<br/>" + isFinite("2019/4/5"));
+            document.write("<br/>" + isFinite("Hello"));
+            document.write("<br/>" + isFinite(2019 / 4 / 5));
+        }
+
+        function f3()
+        {
+            document.write("<br/>" + Number(new Boolean(false)));
+            document.write("<br/>" + Number(new Date()));
+            document.write("<br/>" + Number(new String("12345")));
+            document.write("<br/>" + Number("Hello234"));
+            document.write("<br/>************<br/>");
+            document.write("<br/>" + String(new Boolean(0)));
+            document.write("<br/>" + String(new Array(12,44,5,7,6)));
+            document.write("<br/>" + String(new Date()));
+            document.write("<br/>" + String("Hello234"));
+
+            var datestr = String(new Date());
+            var datearr = datestr.split(" ");
+            document.write(datearr.join("#"));
+        }
+
+        function f4()
+        {
+            var str = "login.jsp?name=bakul joshi#^!~";
+            var encoded = encodeURI(str);
+            document.write("<br/>" + encoded);
+
+            var original = decodeURI(encoded);
+            document.write("<br/>" + original);
+        }
+
+        function f5()
+        {
+            document.write("<br/>" + eval("34+67"));
+            document.write("<br/>" + eval("x=10;y=20;x*y"));
+        }
+    </script>
+    <script>
+        f1();
+        f2();
+        f3();
+        f4();
+        f5();
+
+    </script>
+</body>
+    
+</html>

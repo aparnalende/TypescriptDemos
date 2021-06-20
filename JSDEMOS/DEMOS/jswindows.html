@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function openWin()
+        {
+            mywin = window.open("", "mywindow", "width=200,height=200");
+
+        }
+        function writeInWin() {
+            mywin.document.write("hello from new window");
+        }
+        function focusWin() {
+            mywin.focus();
+        }
+        function resizeWin() {
+            mywin.resizeTo(600, 600);
+        }
+        function closeWin() {
+            if (confirm("Do u want to close?"))
+                mywin.close();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openWin()">Open New Window</button><br/>
+    <button onclick="writeInWin()">Write In New Window</button><br />
+    <button onclick="focusWin()">Focus New Window</button><br />
+    <button onclick="resizeWin()">Resize New Window</button><br />
+    <button onclick="closeWin()">Close New Window</button><br />
+</body>
+</html>

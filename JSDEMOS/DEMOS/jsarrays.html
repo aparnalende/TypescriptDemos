@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var myarr = [10, 20, 30, "hello"];
+        myarr[5] = "end";
+        for (i = 0; i < myarr.length; i++)
+        {
+            document.write(myarr[i] + "<br/>");
+        }
+
+        document.write("<br/>" + myarr.toString());
+        document.write("<br/>" + myarr.join("#"));
+
+        myarr.pop();
+        document.write("<br/> After popping : ");
+        document.write("<br/>" + myarr.toString());
+
+        myarr.push(100);
+        document.write("<br/> After pushing : ");
+        document.write("<br/>" + myarr.toString());
+
+        myarr.shift();
+        document.write("<br/> After shifting : ");
+        document.write("<br/>" + myarr.toString());
+
+        myarr.unshift(5);
+        document.write("<br/> After unshifting : ");
+        document.write("<br/>" + myarr.toString());
+
+        myarr.splice(4, 1, "middle");
+        document.write("<br/> After splicing : ");
+        document.write("<br/>" + myarr.toString());
+
+        var myarr1 = [34, 78, 12, 100, 150, 67, 20];
+        var conarr = myarr.concat(myarr1);
+        document.write("<br/>Concatenated array : " + conarr.toString());
+
+        var myslice = conarr.slice(3, 9);
+        document.write("<br/>Sliced array : " + myslice.toString());
+
+        var idx = conarr.indexOf(100);
+        document.write("<br/> 100 element is present at : " + idx);
+
+        var idx = conarr.indexOf(166);
+        document.write("<br/> 166 element is present at : " + idx);
+
+        var idx = conarr.lastIndexOf(20);
+        document.write("<br/> 20 element is present at last index  : " + idx);
+
+        conarr.sort();
+        document.write("<br/>Concatenated array : " + conarr.toString());
+
+        myarr1.sort(function (a, b) { return a - b });
+        document.write("<br/>Concatenated array : " + myarr1.toString());
+
+    </script>
+</head>
+<body>
+    <br/>
+    <br />
+    <br /><br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>

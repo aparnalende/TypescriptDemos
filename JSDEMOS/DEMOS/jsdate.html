@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var current = new Date();
+        document.write("<br/>current : " + current);
+
+        var date1 = new Date(35374534566);
+        document.write("<br/>using ms : " + date1);
+
+        var date2 = new Date("13 feb 2004");
+        document.write("<br/>using string : " + date2);
+
+        var date3 = new Date(2009, 1, 23, 23, 34, 32);
+        document.write("<br/>using sepearte values : " + date3);
+
+        document.write("<br/> Date : " + current.getDate());
+        document.write("<br/> Day : " + current.getDay());
+        document.write("<br/> Hours : " + current.getHours());
+        document.write("<br/> Year : " + current.getFullYear());
+
+        document.write("<br/> Date String : " + current.toDateString());
+        document.write("<br/> Time String : " + current.toTimeString());
+
+        current.setMonth(6,31);
+        document.write("<br/>current : " + current);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

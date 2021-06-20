@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function change(val)
+        {
+            //val rpresents node on which event has occured
+            val.removeAttribute("class");
+            val.setAttribute("class", "myinfo");
+            //val.style.
+        }
+    </script>
+    <style>
+        .info{
+            color:green;
+        }
+        .myinfo{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="info" onmousedown="change(this)"> Learning DOM </h1>
+    <p class="info"> DOM modifies HTML Page </p>
+</body>
+</html>

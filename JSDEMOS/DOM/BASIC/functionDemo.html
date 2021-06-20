@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function operation(opr,...args) {
+        var res=0;
+        console.log(opr)
+
+        if (opr == "add") return (res = res+args);
+        // else if (opr == "sub") return (res = n1 - n2);
+        // else if (opr == "mul") return (res = n1 * n2);
+        // else if (opr == "div") return (res = n1 / n2);
+      }
+
+      // var a1 = prompt("enter first value");
+      // var a2 = prompt("enter second value");
+      
+      var s1 = operation(parseInt(a1), parseInt(a2), "sub");
+      // var s1 = operation("sub");
+     
+      // console.log("Addition :" + s1);
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="operation('add',20,30,40,50)">Addition</button>
+    <!-- <button onclick="operation('sub')">Subtraction</button>
+    <button onclick="operation('mul')">Multiplication</button>
+    <button onclick="operation('div')">Divison</button> -->
+  </body>
+</html>

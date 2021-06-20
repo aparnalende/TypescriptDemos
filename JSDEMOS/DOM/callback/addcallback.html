@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var add=(a,b,callback)=>{
+            console.log(`Sum of ${a} and ${b} is ${a+b}`);
+            setTimeout(callback,2000);
+        }
+
+        var display=()=>{
+            console.log("this is display method")
+        }
+
+        add(10,20,display);
+
+        setInterval(() => {
+           console.log("setinterval method") 
+        }, 2000);
+
+        // setTimeout=(()=>{ clearInterval(1000);},2000)
+    </script>
+</body>
+</html>

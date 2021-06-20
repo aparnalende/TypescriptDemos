@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function validate()
+        {
+            var uid = document.f1.uid.value;
+            if (uid.length < 8 || uid.length > 12)
+            {
+                alert("UID length should be 8-12");
+                document.f1.uid.value = "";
+                //document.f1.uid.focus();
+                return;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="f1">
+        Enter UID : <input type="text" name="uid" onblur="validate()" /> <br />
+        Enter pwd : <input type="text" name="pwd"  /> <span id="pwderror" style="color:blue"></span> <br />
+        <input type="button" value="LOGIN"  />
+    </form>
+</body>
+</html>

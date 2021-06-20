@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function hello(nm)
+        {
+            //alert("Welcome " + nm);
+            //document.write("<h1> Welcome " + nm+"</h1>");
+            //clears existing content of the web page after reloading
+            document.getElementById("msg").innerHTML = "<h1> Welcome " + nm + "</h1>";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="hello('Bakul')">Click Me</button>
+    <div id="msg"></div>  <!-- used for reserving some space-->
+</body>
+</html>

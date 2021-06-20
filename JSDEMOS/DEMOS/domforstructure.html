@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function addLink()
+        {
+            // <a href=""> Hyperlink </a>
+            var anode = document.createElement("a");  //element node
+            var txtnode = document.createTextNode("Hyperlink"); 
+            //text node
+            anode.appendChild(txtnode);
+            // <a>Hyperlink</a>
+            anode.setAttribute("href", "dombyid.html");
+            // <a href="dombyid.html">Hyperlink</a>
+            document.body.appendChild(anode);
+        
+           var btn= document.getElementsByTagName('button')[0];
+           document.body.removeChild(btn);
+        }
+</script>
+</head>
+<body>
+    <div>
+      
+    </div>
+    <button onclick="addLink()">Add Link</button>
+</body>
+</html>

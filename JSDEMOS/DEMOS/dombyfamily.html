@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function applyBorder()
+        {
+            var divnode = document.getElementById("about");
+            var divchild = divnode.childNodes;
+          //  alert(divchild.length);
+            for(i=0; i<divchild.length; i++)
+            {
+                //nodeType==1 if it is element Node
+                if(divchild[i].nodeType==1) 
+                {
+                    console.log("ele "+divchild[i].nodeName);
+
+                }
+                if(divchild[i].nodeType==2)
+                {
+                    console.log("attr "+divchild[i].nodeName);
+                }
+                if(divchild[i].nodeType==3)
+                {
+                    console.log("txt "+divchild[i].nodeName +"  "+divchild[i].nodeValue);
+                }
+            }
+            for (i = 0; i < divchild.length; i++) {
+                if (divchild[i].nodeType == 1)
+                    divchild[i].style.border = "2px solid green";
+            }
+        }
+        function getText()
+        {
+            var divnode = document.getElementById("about");
+            var divchild = divnode.childNodes;            
+            var str = "<table border=1>";
+            str += "<tr> <th> Element </th> <th> Content </th> </tr>";
+            for (i = 0; i < divchild.length; i++) {
+                if (divchild[i].nodeType == 1)
+                {
+                    str += "<tr>";
+                    str+="<td>"+ divchild[i].nodeName  +"</td>";
+                    str+="<td>"+ divchild[i].textContent  +"</td>";
+                    str += "</tr>";
+                }
+            }
+            str += "</table>";
+            document.getElementById("content").innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+    <div id="about">
+        <h1> Learning DOM </h1>
+        <p> DOM used for modifyng HTML dynamically </p>
+        <a href="#"> Learn more </a>
+        <button onclick="applyBorder()"> Apply Border </button>
+        <button onclick="getText()"> Get Text </button>
+    </div>
+    <div id="content">
+
+    </div>
+</body>
+</html>
